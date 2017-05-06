@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.Button;
 import android.view.View;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
     //Declare elements as member variable
@@ -12,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     EditText outputTxt;
     Button doIt;
     Button clear;
+    Button secondOption;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         outputTxt=(EditText) findViewById(R.id.outputs);
         doIt=(Button) findViewById(R.id.doIt);
         clear=(Button) findViewById(R.id.clear);
+        secondOption=(Button) findViewById(R.id.secondOption);
 
 
         //Set Listeners to Buttons
@@ -46,11 +49,20 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
         clear.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 inputTxt.setText("");
                 outputTxt.setText("");
+            }
+        });
+
+        secondOption.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent=new Intent(getApplicationContext(),ActivityTwo.class);
+                startActivity(intent);
             }
         });
     }

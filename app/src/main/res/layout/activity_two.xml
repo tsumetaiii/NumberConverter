@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.numberconverter.MainActivity">
-
+    tools:context="com.example.numberconverter.ActivityTwo">
 
     <TextView
         android:id="@+id/binToDec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Converting from Binary to Decimal"
+        android:text="Converting from Decimal to Binary"
         tools:layout_constraintTop_creator="1"
         android:layout_marginStart="25dp"
         android:layout_marginTop="61dp"
@@ -120,11 +119,15 @@
         android:layout_marginRight="56dp" />
 
     <Button
+        android:id="@+id/firstOption"
         android:layout_width="812dp"
         android:layout_height="51dp"
-        android:text="Tap for decimal to binary conversion"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="1091dp" />
-
+        android:text="Tap for binary to decimal conversion"
+        tools:layout_editor_absoluteX="-17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="-23dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/outputs"
+        app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>
